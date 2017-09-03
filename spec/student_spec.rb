@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe 'School' do
+
   before :each do
     @school = School.new("Test School")
   end
@@ -20,7 +21,6 @@ describe 'School' do
     it 'is able to add multiple students to a class (grade)' do
       @school.add_student("Jeff Baird", 10)
       @school.add_student("Blake Johnson", 10)
-
       expect(@school.roster).to eq({10 => ["Jeff Baird", "Blake Johnson"]})
     end
 
